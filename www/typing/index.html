@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <title>Juego de tecleo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+     <!-- Para que aplique hay que llegar a él porque está fuera de la carpeta , ponemos ./ para indicar el directorio actual
+    luego pongo ../ para salir al nivel anterior (www)
+  /styles/ para entrar en styles  -->
+    <link rel="stylesheet" href="./../styles/milligram.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>Juego de tecleo</h1>
+      <p> Practica tus habilidades con el teclado. Click <strong>empezar</strong>
+      </p>
+    </header>
+    <!-- Dentro del main hacemos que aparezca la frase que aparece cuando tecleamos  y cuando terminamos que agradece -->
+
+    <main>
+         <!-- Lo metemos dentro de un p llamado cite porque la primera frase es una cita con un identificador para poder encontrarlo luego, la frase felicidades 
+        también va en un p con un identificador -->
+      <cite id="frase"> el veloz murciélago </cite>
+      <p id="mensaje"> Felicidades!! </p>
+      <form>
+           <!-- Ponemos un input que es donde el usuario teclea  -->
+        <input type="text" id="lo-tecleado">
+         <!-- Para que el tiempo empiece a contar y arranque ponemos un boton start  -->
+        <button type="button" id="empezar">Empezar</button>
+      </form>
+    </main>
+     <!-- Para aplicar el javascript  -->
+    <script src="./main.js"></script>
+  </body>
+
+</html>

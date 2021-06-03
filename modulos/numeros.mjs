@@ -1,50 +1,35 @@
-const numeros = [];
-
-export const TAMAÑO = 10;
-
-function inicializarNumeros() {
-  for (let i = 1; i <= TAMAÑO; i++) {
-    numeros.push(i);
-  }
-}
-function mostrarNumeros() {
-  for (let i = 0; i < numeros.length; i++) {
-    console.log(`En la posición ${i} tenemos ${numeros[i]}`);
-  }
-}
-
-export function mostarPares() {
-  for (let i = 0; i < numeros.length; i++) {
-    if (numeros[i] % 2 === 0) {
-      console.log(`En la posición ${i} está el par ${numeros[i]}`);
+const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// función que devuelve los num pares , le paso numeros que es un array y hago un for para recorrerlo
+export function obtenerPares(numeros) {
+  const pares = [];
+  for (let index = 0; index < numeros.length; index++) {
+    const numero = numeros[index];
+    // si un num es par lo mete en un array nuevo llamado pares
+    if (numero % 2 === 0) {
+      pares.push(numero);
     }
   }
+  return pares;
 }
-
-export function extraerPares() {
+// una manera más funcional de programar hace lo mismo que la otra
+// numeros es un array . Tiene funciones de primer orden que puede tener en su argumento otras funcionaes .
+export function obtenerParesFuncional(numeros) {
+  return numeros.filter((numero) => numero % 2 === 0);
+}
+// otra manera de escribirlo 
+export function obtenerParesFuncionalGrande(numeros) {
   return numeros.filter(function (numero) {
     return numero % 2 === 0;
   });
 }
 
-export function obtenerCuadrados() {
+export function obtenerCuadrados(numeros) {
+  // map opera con el array pero ahora no devuelve un booleano , si no lo que quiero , en este caso los cuadrados
   return numeros.map((numero) => numero * numero);
 }
 
-export function obtenerCuadradosDePares() {
-  // const pares = extraerPares();
-  // return pares.map((par) => par * par);
-  return numeros.filter(esPar).map((par) => par * par);
-}
+const pares = obtenerPares(numeros);
 
-export function esPar(numero) {
-  let TAMAÑO = 2;
-  return numero % TAMAÑO === 0;
-}
-
-export const funcionesNumeros = {
-  inicializar: inicializarNumeros,
-  mostrar: mostrarNumeros,
-  n: numeros,
-  TAMAÑO: TAMAÑO,
-};
+// console.log(pares); //esto ejecuta la funcion 
+//console.log(obtenerCuadrados(numeros));
+// lo comento para que al ejecutar el main no me lo pinte 

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <title>Divisas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="./../styles/marx.css"><!--EN link se ponen para que pille la css -->
+    <link rel="stylesheet" href="./color.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>Últimas cotizaciones del Euro</h1>
+    </header>
+    <main>
+      <h2>Fecha: <span id="fecha"></span></h2> <!--EN spam meto sólo la fecha y le pongo un id -->
+      <!-- <dl> una manera de hacer una lista , el navegador ya lo interpreta y lo pinta como una lista 
+        <dt>USD</dt>
+        <dd>1.22</dd>
+        <dt>GBT</dt>
+        <dd>0.87</dd>
+      </dl> -->
+      <ul id="cotizaciones"><!--otra forma de pintar lista no ordenada , el navegador pone puntos delante <ol> es lista ordenad y pone num -->
+        <li>
+          <span class="divisa">CHF : </span><span class="contravalor">1.09</span><!--EN spam meto la clase para pintar las clave,valor, clases definidas en la css -->
+        </li>
+        <li>
+          <span class="divisa">JPY : </span><span class="contravalor">133.79</span>
+        </li>
+      </ul>
+}
+      <script src="./main.js"></script><!--aqui referenciamos a nuestro js -->
+    </main>
+  </body>
+
+</html>
